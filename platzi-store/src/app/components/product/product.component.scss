@@ -1,0 +1,11 @@
+/*:host hace referencia al elemento que encierra a un componente*/
+/*para este caso :host haria referencia a la etiqueta <app-product><app-product>*/
+:host {
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+img {
+    max-width: 100%;
+}
