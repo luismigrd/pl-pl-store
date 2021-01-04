@@ -4,6 +4,7 @@ Branch COMPONENTES
 -------------------
 1. Introducción a Angular
   Bienvenida e introducción al curso
+  
   Instalación y preparación del entorno de desarrollo
   Preparando el entorno para Windows
   Preparando el entorno para Linux
