@@ -3,12 +3,11 @@ Curso de angular plz
 Branch COMPONENTES
 -------------------
 1. Introducción a Angular
-  Bienvenida e introducción al curso
-  
-  Instalación y preparación del entorno de desarrollo
-  Preparando el entorno para Windows
-  Preparando el entorno para Linux
-  Crea tu primera aplicación en Angular
+  a. Bienvenida e introducción al curso  
+  b. Instalación y preparación del entorno de desarrollo
+  c. Preparando el entorno para Windows
+  d. Preparando el entorno para Linux
+  e. Crea tu primera aplicación en Angular
 2. Estructuras de control
   Introducción al Angular CLI y proyecto del curso
   String interpolation
