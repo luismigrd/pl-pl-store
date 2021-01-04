@@ -18,8 +18,16 @@ import { Product } from '../../models/product.model';
 export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
 
-  @Input() product: Product;
+  @Input() product: Product = {
+    id: '',
+    image: '',
+    title: '',
+    price: 0,
+    description: ''
+  };
   @Output() productClicked: EventEmitter<any> = new EventEmitter<any>();
+
+  today = new Date();
 
   constructor() {
     console.log('1. constructor');

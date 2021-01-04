@@ -1,8 +1,9 @@
+<div class="container-principal">
 <input type="title" [(ngModel)]="title">
-<!-- {{ title }} -->
+{{ title }}
 
-
-
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
 <!-- NGIF -->
 
 <div *ngIf="title === 'store'; then store else wellcome">
@@ -44,4 +45,5 @@
     (productClicked)="clickProduct($event)" 
     [product]="product">
 </app-product>
+</div>
 </div>
