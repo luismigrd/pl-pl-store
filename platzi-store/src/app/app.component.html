@@ -1,49 +1,5 @@
 <div class="container-principal">
-<input type="title" [(ngModel)]="title">
-{{ title }}
-
-<input type="text" [(ngModel)]="power">
-{{ power | exponential }}
-<!-- NGIF -->
-
-<div *ngIf="title === 'store'; then store else wellcome">
-  simple vista
-</div>
-
-<ng-template #store>
-  mostrando store
-</ng-template>
-
-<ng-template #wellcome>
-  mostrando wellcome
-</ng-template>
-
-<!-- NGSWITCH -->
-
-<div [ngSwitch]="title">
-  <p *ngSwitchCase="'nicolas'">este es nicolas</p>
-  <p *ngSwitchCase="'julian'">este es julian</p>
-  <p *ngSwitchCase="'camilo'">este es camilo</p>
-  <p *ngSwitchDefault>no hay coincidencias</p>
-</div>
-
-<!-- NGFOR -->
-
-<button (click)="addItem(title)">Add item</button>
-
-<ul>
-  <li *ngIf="items.length === 0">La lista esta vacia</li>
-  <li *ngFor="let name of items; index as i">
-    {{ name }} {{ i }}
-    <button (click)="deleteItem(i)">Delete</button>
-  </li>
-</ul>
-
-<div class="product-grid">
-  <app-product 
-    *ngFor="let product of products" 
-    (productClicked)="clickProduct($event)" 
-    [product]="product">
-</app-product>
-</div>
+    <!-- el router outlet se puede repetir en otros componentes -->
+    <!-- lo estoy volviendo a usar en el layoutComponent para mi vista anidada -->
+    <router-outlet></router-outlet>
 </div>

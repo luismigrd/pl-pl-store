@@ -9,8 +9,8 @@ export class HighlightDirective  implements OnInit {
     // element.nativeElement.style.backgroundColor = 'red';
   }
 
-  @Input() backgroundColor: string = '';
-  @Input() color: string = '';
+  @Input() backgroundColor = '';
+  @Input() color = '';
   ngOnInit(): void {
     this.element.nativeElement.style.backgroundColor = this.backgroundColor;
     this.element.nativeElement.style.color = this.color;

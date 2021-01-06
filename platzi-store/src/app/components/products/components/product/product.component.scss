@@ -1,7 +1,7 @@
 /*:host hace referencia al elemento que encierra a un componente*/
 /*para este caso :host haria referencia a la etiqueta <app-product><app-product>*/
 :host {
-    margin: 4px;
+    margin: 8px;
     border: 1px solid #cccccc;
     border-radius: 4px;
     display: flexbox;
@@ -17,6 +17,7 @@ h3 {
     margin-bottom: 4px;
     display: block;
     padding: 10px;
+    border-radius: 4px 4px 0px 0px;
 }
 
 img {
@@ -46,6 +47,8 @@ button {
     border-radius: 0px 0px 4px 4px;
     margin-top: 16px;
     cursor: pointer;
+    color: #636363;
+    font-weight: 600;
 }
 
 button:hover {
