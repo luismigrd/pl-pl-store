@@ -42,6 +42,10 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
   // el orden de las rutas es importante,
   // si algo no matchea una ruta no seguira a la siguiente, por lo que el notfound deberia ser la ultima ruta, siempre
   { path: '**', pathMatch: 'full', redirectTo: '404' }
