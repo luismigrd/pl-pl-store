@@ -7,6 +7,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CoreModule } from 'src/app/core/core.module';
     ProductsRoutingModule,
     FormsModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    MaterialModule
   ]
 })
 export class ProductsModule { }
