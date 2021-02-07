@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
   today = new Date();
 
   constructor() {
-    console.log('1. constructor');
+    // console.log('1. constructor');
    }
 
   // ngOnChanges(change: SimpleChanges){
@@ -39,19 +39,19 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
   // }
 
   ngOnInit(): void {
-    console.log('3. ngOnInit');
+    // console.log('3. ngOnInit');
   }
 
   ngDoCheck(): void {
-    console.log('4. ngDoCheck');
+    // console.log('4. ngDoCheck');
   }
 
   ngOnDestroy(): void {
-    console.log('5. ngOnDestroy');
+    // console.log('5. ngOnDestroy');
   }
 
   addCart(): void{
-    console.log('Añadir al carrito');
+    console.log('Añadir al carrito: ', this.product.id);
     this.productClicked.emit(this.product.id);
   }
 

@@ -26,14 +26,14 @@ const MaterialModules = [
   MatInputModule,
   MatSelectModule,
   MatRadioModule,
-  LayoutModule,
   MatSidenavModule,
   MatListModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule,
   MatGridListModule,
-  MatMenuModule
+  MatMenuModule,
+  MatSortModule,
+  LayoutModule,
 ]
 
 @NgModule({
