@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { MaterialModule } from '../material/material.module';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MaterialModule } from '../material/material.module';
     ProductFormComponent,
     NavComponent,
     DashboardComponent,
+    ProductListComponent,
   ],
   imports: [
     CommonModule,
