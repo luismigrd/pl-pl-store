@@ -1,9 +1,6 @@
+<a mat-raised-button routerLink="create">Crear Nuevo producto</a>
 <table mat-table [dataSource]="products" class="mat-elevation-z8 products-table">
 
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Id </th>
     <td mat-cell *matCellDef="let product"> {{product.id}} </td>
@@ -22,11 +19,10 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef> Actions </th>
     <td mat-cell *matCellDef="let product"> 
-        <button mat-stroked-button color="primary">Editar</button>
+        <button mat-stroked-button color="primary" [routerLink]="['edit', product.id]">Editar</button>
         <button mat-stroked-button color="warn" (click)="deleteProduct(product.id)">Eliminar</button>
     </td>
   </ng-container>
-
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

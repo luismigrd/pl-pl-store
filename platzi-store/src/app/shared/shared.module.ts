@@ -6,6 +6,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { ExponentialPipe } from './pipes/exponential.pipe';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

@@ -1,0 +1,77 @@
+<form   [formGroup]="form"
+        (ngSubmit)="saveProduct($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Producto</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input placeholder="Id" formControlName="id" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>                        
+                        <input  matInput
+                                placeholder="title"
+                                formControlName="title"
+                                type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input  matInput
+                                placeholder="price"
+                                formControlName="price"
+                                type="number">
+                    </mat-form-field>
+                    <div *ngIf="priceField?.errors && priceField?.dirty">
+                        <p *ngIf="priceField?.hasError('price_invalid')">Este precio no es valido</p>
+                        <p *ngIf="priceField?.hasError('required')">El campo es requerido</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row"> -->
+                <!-- <div class="col-xs"> -->
+                    <!-- <mat-form-field> -->
+                        <!-- <input  matInput -->
+                                <!-- placeholder="price" -->
+                                <!-- formControlName="price" -->
+                                <!-- type="number"> -->
+                    <!-- </mat-form-field> -->
+                <!-- </div> -->
+            <!-- </div> -->
+
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <textarea   matInput
+                                    placeholder="Descripción"
+                                    formControlName="description">
+                        </textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+            
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button
+                    type="submit"
+                    [disabled]="!form.valid">
+                Guardar
+            </button>
+        </mat-card-actions>
+    </mat-card>
+
+
+</form>
