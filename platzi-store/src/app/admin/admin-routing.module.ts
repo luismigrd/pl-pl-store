@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FormEditProductComponent } from './components/form-edit-product/form-edit-product.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
 import { NavComponent } from './components/nav/nav.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 
 const routes: Routes = [
@@ -15,12 +16,16 @@ const routes: Routes = [
         component: DashboardComponent
       },
       {
-        path: 'create',
-        component: ProductFormComponent
-      },
-      {
         path: 'products',
         component: ProductListComponent
+      },
+      {
+        path: 'products/create',
+        component: FormProductComponent
+      },
+      {
+        path: 'products/edit/:id',
+        component: FormEditProductComponent
       },
     ]
   }
